@@ -13,7 +13,7 @@ start /wait msiexec /qn /i datadog-agent-7-latest.amd64.msi APIKEY="XXXXXXXXXXXX
 ```
 Start-Process -Wait msiexec -ArgumentList '/qn /i datadog-agent-7-latest.amd64.msi APIKEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" SITE="us5.datadoghq.com"'
 ```
-## How enable Network Monitor
+## How enable Network Monitor in Linux
 ```
 cat system-probe.yaml | head
 To do Network Monitor, need to enable SNMP.
@@ -30,3 +30,8 @@ To do Network Monitor, need to enable SNMP.
 ```
 Systemctl restart sshd
 ```
+## How to enable Network Monitor in Windows
+```
+C:\ProgramData\Datadog\system-probe.yaml    # if ProgramData directory in not visible in GUI check in cli mode (cmd)
+```
+net /y stop datadogagent && net start datadogagent
