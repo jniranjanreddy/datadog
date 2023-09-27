@@ -35,3 +35,9 @@ Systemctl restart sshd
 C:\ProgramData\Datadog\system-probe.yaml    # if ProgramData directory in not visible in GUI check in cli mode (cmd)
 ```
 net /y stop datadogagent && net start datadogagent
+
+## How to enable File IO Logs
+```
+Source: https://docs.datadoghq.com/integrations/system/
+C:\ProgramData\Datadog\conf.d\system_core.d
+```
